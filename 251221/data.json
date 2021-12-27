@@ -1,5 +1,169 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Emine Günday",
+      "author": "Bindir",
+      "id": 2
+    },
+    {
+      "title": "Ekin Alnıaçık I",
+      "author": "Butuk",
+      "id": 3
+    },
+    {
+      "title": "Selami Aclan",
+      "author": "Bekbekeç",
+      "id": 4
+    },
+    {
+      "title": "Prof. Dr. Tevfik Mayhoş",
+      "author": "Balta",
+      "id": 5
+    },
+    {
+      "title": "Rauf Poçan",
+      "author": "Altın",
+      "id": 6
+    },
+    {
+      "title": "Ercüment Korol",
+      "author": "Borlukçu",
+      "id": 7
+    },
+    {
+      "title": "Talay Gürmen",
+      "author": "Boldaz",
+      "id": 8
+    },
+    {
+      "title": "Şengül Adal",
+      "author": "Kazanç",
+      "id": 9
+    },
+    {
+      "title": "Yüce Körmükçü",
+      "author": "Barçadoğmuş",
+      "id": 10
+    },
+    {
+      "title": "Dr. Akın Alp Kocabıyık",
+      "author": "Bekeçtegin",
+      "id": 11
+    },
+    {
+      "title": "Esin Keçeci",
+      "author": "Atasagun",
+      "id": 12
+    },
+    {
+      "title": "Şahap Kuday",
+      "author": "Bongulboğa",
+      "id": 13
+    },
+    {
+      "title": "Mutemed Taşlı",
+      "author": "Bayurku",
+      "id": 14
+    },
+    {
+      "title": "Asım Tekelioğlu",
+      "author": "Bölen",
+      "id": 15
+    },
+    {
+      "title": "Bayan Eray Karabulut",
+      "author": "Beğtegin",
+      "id": 16
+    },
+    {
+      "title": "Bayan Fidan Sinanoğlu",
+      "author": "Barman",
+      "id": 17
+    },
+    {
+      "title": "Nida Aybar",
+      "author": "Akım",
+      "id": 18
+    },
+    {
+      "title": "Kayaalp Orbay",
+      "author": "Boğa",
+      "id": 19
+    },
+    {
+      "title": "Okan Poyrazoğlu",
+      "author": "Ançuk",
+      "id": 20
+    },
+    {
+      "title": "Filiz Özdenak",
+      "author": "Abı",
+      "id": 21
+    },
+    {
+      "title": "Cafer Kulaksızoğlu",
+      "author": "İldike",
+      "id": 22
+    },
+    {
+      "title": "Ferda Ertepınar",
+      "author": "Bıtrı",
+      "id": 23
+    },
+    {
+      "title": "Jale Tahincioğlu",
+      "author": "Bozbörü",
+      "id": 24
+    },
+    {
+      "title": "Yonca Tuğluk",
+      "author": "Arbuz",
+      "id": 25
+    },
+    {
+      "title": "Nesim Paksüt",
+      "author": "Aygırak",
+      "id": 26
+    },
+    {
+      "title": "Özge Süleymanoğlu",
+      "author": "Begi",
+      "id": 27
+    },
+    {
+      "title": "Bayan Serpil Keçeci",
+      "author": "Günçiçek",
+      "id": 28
+    },
+    {
+      "title": "Gülsen Kunt",
+      "author": "Börteçine",
+      "id": 29
+    },
+    {
+      "title": "Hale Özgörkey",
+      "author": "Argun",
+      "id": 30
+    },
+    {
+      "title": "Sadi Taşlı",
+      "author": "Bıdın",
+      "id": 31
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
