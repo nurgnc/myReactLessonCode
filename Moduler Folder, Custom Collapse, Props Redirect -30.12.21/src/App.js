@@ -1,12 +1,13 @@
 import React from 'react';
 import './style.css';
-import NavBar from './components/Navbar';
+//components
+import Navbar from './components/Navbar';
 import Card from './components/Card';
 
 export default function App() {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <div className="container">
         <div className="row">
           <div className="col-sm-3">

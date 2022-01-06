@@ -1,9 +1,7 @@
 import React from 'react';
 
-function Profile() {
-  return(
-    
-  )
+function Profile(props) {
+  return <>Profile</>;
 }
 
 export default Profile;
