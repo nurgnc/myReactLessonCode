@@ -23,17 +23,17 @@ store.subscribe(() => console.log(store.getState())); //her işlem olduğunda g�
 // store.dispatch(addTask(2, "genc"));
 // store.dispatch(removeTask(2));
 
-store.dispatch(addPost(1, "deneme"));
+store.dispatch(addPost("deneme"));
 // store.dispatch(addPost(2, "hello"));
 // store.dispatch(removePost(2));
 // store.dispatch(updatePost(1, "deneme2"));
-store.dispatch(addComment(2, 1, "nice post"));
-store.dispatch(addComment(3, 2, "bad post"));
+store.dispatch(addComment(1, "nice post"));
+store.dispatch(addComment(2, "bad post"));
 
 // store.dispatch(removeComment(1));
 store.dispatch(removeUserComment(2));
 // store.dispatch(addDownVote(1));
 
-// store.dispatch(addUpVote(1));
-// console.log(store.getState().posts[0].votes);
-console.log(store.getState().posts[2].comments);
+store.dispatch(addUpVote("21d741e2-9ad1-454f-9d8d-454e45d52f43"));
+console.log(store.getState().posts[0].votes);
+// console.log(store.getState().posts[2].comments);

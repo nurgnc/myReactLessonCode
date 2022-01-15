@@ -1,5 +1,7 @@
 //{id, title, comments: [{id: 1,userId: 1, comment: "d"}], {votes: {up: 0, down: 0}}}
 
+import { v4 as uuidv4 } from "uuid";
+
 //action Types
 //ADD_POST, REMOVE_POST(id), UPDATE_POST(id, title), ADD_COMMENT(id, userId, comment), REMOVE_COMMENT(id), REMOVE_USER_COMMENTS(userId), ADD_UP_VOTE(id), ADD_DOWN_VOTE(id)
 
@@ -13,9 +15,9 @@ const ADD_UP_VOTE = "ADD_UP_VOTE";
 const ADD_DOWN_VOTE = "ADD_DOWN_VOTE";
 
 //action CREATORS
-export const addPost = (id, title) => ({
+export const addPost = (title) => ({
   type: ADD_POST,
-  payload: { id, title, comments: [], votes: { up: 0, down: 0 } },
+  payload: { id: uuidv4(), title, comments: [], votes: { up: 0, down: 0 } },
 });
 
 export const removePost = (id) => ({
@@ -28,9 +30,9 @@ export const updatePost = (id, title) => ({
   payload: { id, title },
 });
 
-export const addComment = (id, userId, comment) => ({
+export const addComment = (postId, userId, comment) => ({
   type: ADD_COMMENT,
-  payload: { id, comments: [{ userId, comment }] },
+  payload: { postId, userId, comment },
 });
 
 export const removeComment = (id) => ({
@@ -68,7 +70,19 @@ const postReducer = (posts = [], action) => {
         return item;
       });
     case ADD_COMMENT:
-      return [...posts, action.payload];
+      return posts.map((item) => {
+        if (item.postId === action.payload.postId) {
+          // return {
+          //   ...item,
+          //   comments: [
+          //     { id: item.comments.length + 1, userId, comment },
+          //     ...item.comments,
+          //   ],
+          // };
+          item.comments = [{ id: uuidv4(), userId, comment }, ...item.comments];
+        }
+        return item;
+      });
     case REMOVE_COMMENT:
       return posts.filter((item) => item.id !== action.payload);
     case REMOVE_USER_COMMENTS:
@@ -77,7 +91,9 @@ const postReducer = (posts = [], action) => {
       return posts.map((item) => {
         if (item.id === action.payload) {
           // if süslü parantezi...
-          return { ...item, votes: { ...item.votes, up: item.votes.up + 1 } }; //obje
+          //return { ...item, votes: { ...item.votes, up: item.votes.up + 1 } }; //obje
+          //item.votes = { ...item.votes, up: item.votes.up + 1 };
+          item.votes.up = item.votes.up + 1;
         }
         return item;
       });
